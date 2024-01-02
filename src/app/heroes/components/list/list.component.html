@@ -1,0 +1,22 @@
+<h2 *ngIf="deletedHeroName">
+	<span class="text-danger">{{ deletedHeroName }}</span> fue eliminado
+	exitosamente
+</h2>
+
+<ul class="list-group">
+	<li *ngFor="let name of heroes" class="list-group-item">{{ name }}</li>
+</ul>
+
+<button
+	*ngIf="showDeleteHeroButton; else resetHeroesTemplate"
+	(click)="deleteLastHero()"
+	class="btn btn-danger mt-3"
+>
+	Borrar último héroe
+</button>
+
+<ng-template #resetHeroesTemplate>
+	<button (click)="resetHeroes()" class="btn btn-primary mt-3">
+		Reset Heroes
+	</button>
+</ng-template>

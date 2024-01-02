@@ -1,0 +1,41 @@
+<h1>{{ name }}</h1>
+
+<dl>
+	<dt>Nombre:</dt>
+	<dd>{{ name }}</dd>
+
+	<dt>Edad:</dt>
+	<dd>{{ age }}</dd>
+
+	<dt>Método:</dt>
+	<dd>{{ getHeroData() }}</dd>
+
+	<dt>Nombre en mayúscula:</dt>
+	<dd>{{ uppercasedName }}</dd>
+</dl>
+
+<div class="d-flex align-items-center gap-3">
+	<button
+		*ngIf="showChangeNameButton"
+		class="btn btn-primary"
+		(click)="changeName()"
+	>
+		Cambiar Nombre
+	</button>
+
+	<button
+		*ngIf="showChangeAgeButton"
+		class="btn btn-primary"
+		(click)="changeAge()"
+	>
+		Cambiar Edad
+	</button>
+
+	<button
+		*ngIf="showResetDataButton"
+		class="btn btn-primary"
+		(click)="resetData()"
+	>
+		Reiniciar Valores
+	</button>
+</div>
