@@ -1,0 +1,12 @@
+{
+    "angular-schematics.schematicsDefaultOptions": {
+        "angular-component": {
+            "skipDisplayBlock": true,
+            "skipChangeDetectionOnPush": true
+        },
+        "angular-*": {
+            "externalTemplate": true,
+            "stylesArray": true
+        }
+    }
+}
