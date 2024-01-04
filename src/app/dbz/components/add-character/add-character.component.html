@@ -1,0 +1,27 @@
+<form class="d-flex flex-column gap-3" (submit)="emitCharacter()">
+	<div>
+		<label class="d-block" for="name">Nombre</label>
+		<input
+			type="text"
+			id="name"
+			name="name"
+			placeholder="Nombre"
+			class="form-control"
+			[(ngModel)]="character.name"
+		/>
+	</div>
+
+	<div>
+		<label class="d-block" for="power">Poder</label>
+		<input
+			type="number"
+			id="power"
+			name="power"
+			placeholder="500"
+			class="form-control"
+			[(ngModel)]="character.power"
+		/>
+	</div>
+
+	<button type="submit" class="btn btn-primary">Agregar</button>
+</form>

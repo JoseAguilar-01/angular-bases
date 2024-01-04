@@ -1,0 +1,11 @@
+<h1>DBZ Personajes</h1>
+
+<div class="d-flex justify-content-between gap-5">
+	<dbz-list
+		[characterList]="characters"
+		(onDeleteCharacter)="onDeleteCharacter($event)"
+	></dbz-list>
+	<dbz-add-character
+		(onNewCharacter)="onNewCharacter($event)"
+	></dbz-add-character>
+</div>

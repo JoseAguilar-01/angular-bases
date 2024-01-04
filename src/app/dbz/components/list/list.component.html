@@ -1,0 +1,64 @@
+<table class="table">
+	<thead>
+		<tr class="row">
+			<th class="col">Índice</th>
+			<th class="col">Nombre</th>
+			<th class="col">Poder</th>
+			<th class="col">Acciones</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr
+			*ngFor="
+				let character of characterList;
+				let i = index;
+				let isFirst = first;
+				let isLast = last
+			"
+			class="row"
+		>
+			<td
+				class="col d-flex align-items-center"
+				[ngClass]="{
+					'bg-success': isFirst,
+					'bg-secondary': isLast,
+					'text-white': isFirst || isLast
+				}"
+			>
+				{{ i + 1 }}
+			</td>
+			<td
+				class="col d-flex align-items-center"
+				[ngClass]="{
+					'bg-success': isFirst,
+					'bg-secondary': isLast,
+					'text-white': isFirst || isLast
+				}"
+			>
+				{{ character.name }}
+			</td>
+			<td
+				class="col d-flex align-items-center"
+				[ngClass]="{
+					'bg-success': isFirst,
+					'bg-secondary': isLast,
+					'text-white': isFirst || isLast
+				}"
+			>
+				{{ character.power }}
+			</td>
+			<td
+				class="col d-flex justify-content-center align-items-center"
+				[ngClass]="{
+					'bg-success': isFirst,
+					'bg-secondary': isLast,
+					'text-white': isFirst || isLast
+				}"
+			>
+				<button class="btn btn-danger" (click)="deleteCharacter(character.id)">
+					X
+				</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
